@@ -14,6 +14,7 @@
 		020C2980207F5EF600F8342A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020C297E207F5EF600F8342A /* LaunchScreen.storyboard */; };
 		020C298B207F5EF700F8342A /* GCDExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C298A207F5EF700F8342A /* GCDExampleTests.swift */; };
 		020C2996207F5EF700F8342A /* GCDExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C2995207F5EF700F8342A /* GCDExampleUITests.swift */; };
+		023F2E5A207FA811003AA5B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F2E59207FA811003AA5B8 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		020C2991207F5EF700F8342A /* GCDExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		020C2995207F5EF700F8342A /* GCDExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDExampleUITests.swift; sourceTree = "<group>"; };
 		020C2997207F5EF700F8342A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		023F2E59207FA811003AA5B8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				020C297C207F5EF600F8342A /* Assets.xcassets */,
 				020C297E207F5EF600F8342A /* LaunchScreen.storyboard */,
 				020C2981207F5EF600F8342A /* Info.plist */,
+				023F2E59207FA811003AA5B8 /* User.swift */,
 			);
 			path = GCDExample;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023F2E5A207FA811003AA5B8 /* User.swift in Sources */,
 				020C2978207F5EF500F8342A /* ViewController.swift in Sources */,
 				020C2976207F5EF500F8342A /* AppDelegate.swift in Sources */,
 			);
