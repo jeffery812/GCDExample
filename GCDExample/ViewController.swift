@@ -12,29 +12,29 @@ import UIKit
 class ViewController: UIViewController {
     let dispatchQueue = DispatchQueue(label: "com.crafttang.concurrency", attributes: .concurrent)
     let dispatchGroup = DispatchGroup()
-    let workHistory = [(1998, "Hisun"),(2004, "Huawei"),(2008, "Baidu"),(2010, "Google"), (2015, "eBuilder")]
+    let contacts = [("Leijun", "leijun@mi.com"), ("Luoyonghao", "luoyonghao@smartisan.com"), ("Yuchengdong", "yuchengdong@huawei.com"), ("Goodguy", "crafttang@gmail.com")]
 
     // Concurrent test1
     @IBAction func button1Tapped(_ sender: UIButton) {
-        let user = User(name: "Magnus", year: 1990, company: "Not working")
-        beginWorking(user: user, workHistory: workHistory)
+        let person = Person(name: "unknown", email: "unknown")
+        updateContact(person: person, contacts: contacts)
     }
     
     // Concurrent test2
     @IBAction func button2Tapped(_ sender: UIButton) {
-        let user = ThreadSafeUser(name: "Magnus", year: 1990, company: "Not working")
-        beginWorking(user: user, workHistory: workHistory)
+        let person = ThreadSafePerson(name: "unknown", email: "unknown")
+        updateContact(person: person, contacts: contacts)
     }
     
-    private func beginWorking(user: User, workHistory: [(Int, String)]) {
-        for (year, company) in workHistory {
+    private func updateContact(person: Person, contacts: [(String, String)]) {
+        for (name, email) in contacts {
             dispatchQueue.async(group: dispatchGroup) {
-                user.setProperty(year: year, company: company)
-                print("Current user: \(user)")
+                person.setProperty(name: name, email: email)
+                print("Current person: \(person)")
             }
         }
         dispatchGroup.notify(queue: DispatchQueue.global()) {
-            print("==> Final user: \(user)")
+            print("==> Final person: \(person)")
         }
     }
 }
